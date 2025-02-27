@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Garden - Nurture Your Virtual Plants</title>
+    <meta name="description" content="Create, nurture, and watch your virtual plants grow in an interactive 3D digital garden environment.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#4CAF50">
+    <meta name="author" content="23f2003700">
+    <meta name="created" content="2025-02-27 20:52:09">
+</head>
+<body class="light-theme">
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch" class="toggle-label tooltip">
+            <span class="toggle-icon"></span>
+            <span class="tooltip-text">Toggle between light and dark theme</span>
+        </label>
+    </div>
+
+    <header>
+        <h1>Digital Garden</h1>
+        <p class="subtitle">Watch your creativity bloom in 3D space</p>
+    </header>
+
+    <main>
+        <div class="garden-container">
+            <canvas id="garden-canvas"></canvas>
+            <div class="garden-controls">
+                <button id="add-plant" class="garden-btn tooltip">
+                    Plant Seed
+                    <span class="tooltip-text">Add a new plant to your garden</span>
+                </button>
+                <button id="water-plants" class="garden-btn tooltip">
+                    Water Garden
+                    <span class="tooltip-text">Nourish your plants with water</span>
+                </button>
+                <button id="add-sunlight" class="garden-btn tooltip">
+                    Add Sunlight
+                    <span class="tooltip-text">Provide sunlight for healthy growth</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="plant-info">
+            <h2>Your Garden Stats</h2>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Plants</span>
+                    <span class="stat-value" id="plants-count">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Garden Age</span>
+                    <span class="stat-value" id="garden-age">0 days</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Health</span>
+                    <span class="stat-value" id="garden-health">100%</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="health-bar" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="plant-selection">
+        <h2>Plant Types</h2>
+        <div class="plant-types">
+            <div class="plant-type tooltip" data-type="flower">
+                <div class="plant-preview flower-preview"></div>
+                <span>Flower</span>
+                <span class="tooltip-text">Colorful and cheerful flowers that grow quickly</span>
+            </div>
+            <div class="plant-type tooltip" data-type="tree">
+                <div class="plant-preview tree-preview"></div>
+                <span>Tree</span>
+                <span class="tooltip-text">Majestic trees that grow tall and provide shade</span>
+            </div>
+            <div class="plant-type tooltip" data-type="succulent">
+                <div class="plant-preview succulent-preview"></div>
+                <span>Succulent</span>
+                <span class="tooltip-text">Drought-resistant plants that require little water</span>
+            </div>
+            <div class="plant-type tooltip" data-type="mystery">
+                <div class="plant-preview mystery-preview"></div>
+                <span>Mystery</span>
+                <span class="tooltip-text">Mysterious crystalline plants with unknown properties</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Created with ❤️ | <span id="current-year"></span></p>
+        <div class="social-links">
+            <a href="#" class="social-link">Share Garden</a>
+            <a href="#" class="social-link">Settings</a>
+            <a href="#" class="social-link">About</a>
+        </div>
+        <div class="app-metadata">
+            <small>App created on 2025-02-27 20:52:09 by 23f2003700</small>
+        </div>
+    </footer>
+
+    <div class="share-button" id="share-garden">
+        <span class="share-icon">↗️</span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/audio-manager.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/plant-growth.js"></script>
+    <script src="js/garden-scene.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Google Analytics placeholder (implement with actual ID when deployed) -->
+    <script>
+      // Analytics tracking code would go here
+      console.log("Digital Garden App - Analytics initialized");
+      console.log("Created: 2025-02-27 20:54:06 by 23f2003700");
+    </script>
+</body>
+</html>
